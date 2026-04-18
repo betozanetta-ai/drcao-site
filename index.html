@@ -1,0 +1,2589 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Cão Abrigo Pet — Todo cão merece amor</title>
+    <meta name="description" content="O Dr. Cão resgata, cuida e encontra lares para cães abandonados. Sem ajuda governamental, dependemos de doações. Ajude-nos a salvar mais vidas.">
+    <meta name="keywords" content="abrigo de cães, adoção de cachorro, doação, resgate animal, Dr. Cão, abrigo pet">
+    <meta property="og:title" content="Dr. Cão Abrigo Pet — Todo cão merece amor">
+    <meta property="og:description" content="Resgatamos, cuidamos e encontramos lares. Sem governo, sem patrocínio — só coração. Doe e faça parte dessa história.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://drcaoabrigo.com.br">
+    <meta property="og:image" content="https://drcaoabrigo.com.br/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        /* ============================================
+           DR. CÃO — WARM HEARTH AESTHETIC
+           ============================================ */
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --amber: #E8913A;
+            --amber-light: #F4B76B;
+            --amber-dark: #C97420;
+            --green: #5B8C5A;
+            --green-light: #7BAF7A;
+            --green-dark: #3D6B3C;
+            --brown: #4A3728;
+            --brown-light: #6B5443;
+            --cream: #FFF8F0;
+            --cream-dark: #F5EBD9;
+            --text: #2D1B0E;
+            --text-light: #5C4A3A;
+            --white: #FFFFFF;
+            --red-soft: #D4534B;
+            --yellow: #F5D76E;
+            --shadow-sm: 0 2px 8px rgba(74, 55, 40, 0.08);
+            --shadow-md: 0 4px 20px rgba(74, 55, 40, 0.12);
+            --shadow-lg: 0 8px 40px rgba(74, 55, 40, 0.16);
+            --shadow-xl: 0 16px 60px rgba(74, 55, 40, 0.2);
+            --radius: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text);
+            background: var(--cream);
+            overflow-x: hidden;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.2;
+        }
+
+        .handwritten {
+            font-family: 'Caveat', cursive;
+        }
+
+        a {
+            color: var(--amber);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover { color: var(--amber-dark); }
+
+        img { max-width: 100%; display: block; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; }
+
+        /* ============================================
+           NOISE TEXTURE OVERLAY
+           ============================================ */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.025;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-size: 256px 256px;
+        }
+
+        /* ============================================
+           PAW PRINT DECORATIVE ELEMENTS
+           ============================================ */
+        .paw-scatter {
+            position: absolute;
+            font-size: 24px;
+            opacity: 0.07;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        /* ============================================
+           HEADER / NAVIGATION
+           ============================================ */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 16px 0;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .header.scrolled {
+            background: rgba(255, 248, 240, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 2px 20px rgba(74, 55, 40, 0.1);
+            padding: 10px 0;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            color: var(--brown);
+            z-index: 1001;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--amber);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 3px 10px rgba(232, 145, 58, 0.3);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav a {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--brown);
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: var(--amber);
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
+
+        .nav a:hover::after { width: 100%; }
+        .nav a:hover { color: var(--amber); }
+
+        .nav-cta {
+            background: var(--amber) !important;
+            color: var(--white) !important;
+            padding: 10px 24px !important;
+            border-radius: 50px;
+            font-weight: 800 !important;
+            box-shadow: 0 4px 15px rgba(232, 145, 58, 0.35);
+            transition: all 0.3s !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--amber-dark) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(232, 145, 58, 0.45) !important;
+        }
+
+        .nav-cta::after { display: none !important; }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 8px;
+            background: none;
+            border: none;
+        }
+
+        .hamburger span {
+            width: 26px;
+            height: 2.5px;
+            background: var(--brown);
+            border-radius: 3px;
+            transition: all 0.3s;
+            display: block;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: var(--cream);
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .mobile-menu a {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: var(--brown);
+        }
+
+        @media (max-width: 768px) {
+            .nav { display: none; }
+            .hamburger { display: flex; }
+        }
+
+        /* ============================================
+           FLOATING DONATE BUTTON
+           ============================================ */
+        .floating-donate {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 998;
+            background: var(--amber);
+            color: var(--white);
+            padding: 16px 28px;
+            border-radius: 50px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-size: 1rem;
+            box-shadow: 0 6px 30px rgba(232, 145, 58, 0.5);
+            cursor: pointer;
+            border: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .floating-donate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .floating-donate:hover {
+            background: var(--amber-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(232, 145, 58, 0.6);
+        }
+
+        .floating-donate .pulse-ring {
+            position: absolute;
+            top: -4px; left: -4px;
+            right: -4px; bottom: -4px;
+            border: 2px solid var(--amber);
+            border-radius: 50px;
+            animation: pulse-ring 2s infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(1.15); }
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse at 20% 80%, rgba(232, 145, 58, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(91, 140, 90, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(244, 183, 107, 0.08) 0%, transparent 70%),
+                linear-gradient(175deg, var(--cream) 0%, #FFF0DD 40%, #FFECD2 70%, var(--cream-dark) 100%);
+        }
+
+        .hero::before {
+            content: '🐾';
+            position: absolute;
+            font-size: 280px;
+            opacity: 0.035;
+            right: -40px;
+            top: 10%;
+            transform: rotate(-15deg);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%23FFF8F0' d='M0,60 C360,120 720,0 1080,60 C1260,90 1380,80 1440,70 L1440,120 L0,120 Z'/%3E%3C/svg%3E") no-repeat bottom center;
+            background-size: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 720px;
+            padding: 120px 0 80px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(232, 145, 58, 0.12);
+            border: 1px solid rgba(232, 145, 58, 0.25);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--amber-dark);
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 6vw, 3.8rem);
+            font-weight: 900;
+            color: var(--brown);
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: var(--amber);
+            position: relative;
+        }
+
+        .hero h1 em::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: rgba(232, 145, 58, 0.2);
+            border-radius: 4px;
+            z-index: -1;
+        }
+
+        .hero-subtitle {
+            font-family: 'Caveat', cursive;
+            font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+            color: var(--green);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-text {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 36px;
+            max-width: 540px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-size: 1.05rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--amber);
+            color: var(--white);
+            box-shadow: 0 6px 25px rgba(232, 145, 58, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: var(--amber-dark);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 35px rgba(232, 145, 58, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--brown);
+            border: 2px solid var(--brown);
+        }
+
+        .btn-secondary:hover {
+            background: var(--brown);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .hero-paws {
+            position: absolute;
+            bottom: 140px;
+            right: 10%;
+            display: flex;
+            gap: 20px;
+            opacity: 0.12;
+        }
+
+        .hero-paws span {
+            font-size: 32px;
+            transform: rotate(var(--r, 0deg));
+        }
+
+        /* ============================================
+           ABOUT SECTION
+           ============================================ */
+        .about {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--amber);
+            margin-bottom: 16px;
+        }
+
+        .section-label::before {
+            content: '';
+            width: 32px;
+            height: 2px;
+            background: var(--amber);
+            border-radius: 2px;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 900;
+            color: var(--brown);
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin-bottom: 48px;
+        }
+
+        .about-story {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .about-image {
+            aspect-ratio: 4/3;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            position: relative;
+            background:
+                linear-gradient(135deg, var(--amber-light) 0%, var(--amber) 50%, var(--amber-dark) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-image-inner {
+            text-align: center;
+            color: white;
+            padding: 40px;
+        }
+
+        .about-image-inner .emoji-large {
+            font-size: 64px;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .about-image-inner p {
+            font-family: 'Caveat', cursive;
+            font-size: 1.4rem;
+            opacity: 0.9;
+        }
+
+        .about-text p {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.9;
+        }
+
+        .about-text .highlight-quote {
+            font-family: 'Caveat', cursive;
+            font-size: 1.6rem;
+            color: var(--amber);
+            font-weight: 700;
+            padding: 16px 0 16px 20px;
+            border-left: 3px solid var(--amber);
+            margin: 28px 0;
+        }
+
+        .team {
+            display: flex;
+            gap: 16px;
+            margin-top: 28px;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--white);
+            padding: 10px 18px;
+            border-radius: 50px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .team-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: white;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+        }
+
+        .team-member:nth-child(1) .team-avatar { background: var(--amber); }
+        .team-member:nth-child(2) .team-avatar { background: var(--green); }
+        .team-member:nth-child(3) .team-avatar { background: var(--brown-light); }
+        .team-member:nth-child(4) .team-avatar { background: var(--amber-dark); }
+
+        .team-name {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--brown);
+        }
+
+        .team-role {
+            font-size: 0.75rem;
+            color: var(--text-light);
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 36px 20px;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+        }
+
+        .stat-card:nth-child(1)::before { background: var(--amber); }
+        .stat-card:nth-child(2)::before { background: var(--green); }
+        .stat-card:nth-child(3)::before { background: var(--amber-dark); }
+        .stat-card:nth-child(4)::before { background: var(--green-dark); }
+
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .stat-number {
+            font-family: 'Nunito', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--brown);
+            display: block;
+        }
+
+        .stat-label {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        /* ============================================
+           WHAT WE DO
+           ============================================ */
+        .what-we-do {
+            padding: 100px 0;
+            background:
+                radial-gradient(ellipse at 80% 50%, rgba(91, 140, 90, 0.06) 0%, transparent 50%),
+                var(--white);
+            position: relative;
+        }
+
+        .what-we-do::before,
+        .what-we-do::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 80px;
+        }
+
+        .what-we-do::before {
+            top: -2px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80'%3E%3Cpath fill='%23FFF8F0' d='M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,0 L0,0 Z'/%3E%3C/svg%3E") no-repeat top center;
+            background-size: cover;
+        }
+
+        .what-we-do .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .what-we-do .section-subtitle {
+            margin: 0 auto 48px;
+        }
+
+        .process {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 0;
+            flex-wrap: wrap;
+        }
+
+        .process-step {
+            flex: 1;
+            min-width: 160px;
+            max-width: 200px;
+            text-align: center;
+            position: relative;
+            padding: 0 12px;
+        }
+
+        .process-step:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -12px;
+            top: 36px;
+            font-size: 1.4rem;
+            color: var(--amber);
+            font-weight: 700;
+        }
+
+        .process-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 16px;
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .process-step:hover .process-icon {
+            transform: scale(1.1);
+        }
+
+        .process-step:nth-child(1) .process-icon { background: rgba(232, 145, 58, 0.12); }
+        .process-step:nth-child(2) .process-icon { background: rgba(91, 140, 90, 0.12); }
+        .process-step:nth-child(3) .process-icon { background: rgba(232, 145, 58, 0.12); }
+        .process-step:nth-child(4) .process-icon { background: rgba(91, 140, 90, 0.12); }
+        .process-step:nth-child(5) .process-icon { background: rgba(232, 145, 58, 0.12); }
+
+        .process-title {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-size: 1rem;
+            color: var(--brown);
+            margin-bottom: 8px;
+        }
+
+        .process-desc {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           RESCUED DOGS
+           ============================================ */
+        .rescued {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .rescued .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .rescued .section-subtitle {
+            margin: 0 auto 48px;
+        }
+
+        .dogs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-bottom: 48px;
+        }
+
+        .dog-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .dog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .dog-photo {
+            aspect-ratio: 4/3;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dog-photo-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .dog-card:nth-child(1) .dog-photo-placeholder { background: linear-gradient(135deg, #F5D5B0, #E8C19A); }
+        .dog-card:nth-child(2) .dog-photo-placeholder { background: linear-gradient(135deg, #C8D8C0, #A8C8A0); }
+        .dog-card:nth-child(3) .dog-photo-placeholder { background: linear-gradient(135deg, #D4C4B4, #C0A890); }
+        .dog-card:nth-child(4) .dog-photo-placeholder { background: linear-gradient(135deg, #F0D8B8, #DCC098); }
+        .dog-card:nth-child(5) .dog-photo-placeholder { background: linear-gradient(135deg, #B8C8B0, #98B890); }
+        .dog-card:nth-child(6) .dog-photo-placeholder { background: linear-gradient(135deg, #E0D0C0, #C8B8A8); }
+
+        .dog-photo-placeholder .emoji-dog {
+            font-size: 3.5rem;
+        }
+
+        .dog-photo-placeholder span:last-child {
+            font-family: 'Caveat', cursive;
+            font-size: 1rem;
+            color: rgba(74, 55, 40, 0.5);
+        }
+
+        .dog-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+        }
+
+        .badge-available {
+            background: var(--green);
+            color: white;
+        }
+
+        .badge-treatment {
+            background: var(--yellow);
+            color: var(--brown);
+        }
+
+        .dog-info {
+            padding: 20px;
+        }
+
+        .dog-name {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--brown);
+            margin-bottom: 6px;
+        }
+
+        .dog-details {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        .dog-story {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .dogs-cta {
+            text-align: center;
+        }
+
+        .instagram-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: var(--white);
+            border: 2px solid var(--brown);
+            border-radius: 50px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-size: 1rem;
+            color: var(--brown);
+            transition: all 0.3s;
+        }
+
+        .instagram-link:hover {
+            background: var(--brown);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* ============================================
+           THE REALITY (EMOTIONAL SECTION)
+           ============================================ */
+        .reality {
+            padding: 100px 0;
+            background:
+                radial-gradient(ellipse at 30% 50%, rgba(212, 83, 75, 0.05) 0%, transparent 50%),
+                linear-gradient(170deg, var(--brown) 0%, #3A2A1E 50%, #2D1B0E 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reality::before {
+            content: '🐾 🐾 🐾';
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            font-size: 2rem;
+            opacity: 0.06;
+            letter-spacing: 20px;
+            pointer-events: none;
+        }
+
+        .reality-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .reality-icon {
+            font-size: 3rem;
+            margin-bottom: 24px;
+            display: block;
+            opacity: 0.8;
+        }
+
+        .reality .section-label {
+            color: var(--red-soft);
+        }
+
+        .reality .section-label::before {
+            background: var(--red-soft);
+        }
+
+        .reality .section-title {
+            color: var(--white);
+            margin-bottom: 28px;
+        }
+
+        .reality-text {
+            font-size: 1.15rem;
+            line-height: 2;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+        }
+
+        .reality-highlight {
+            font-family: 'Caveat', cursive;
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            color: var(--amber-light);
+            margin: 36px 0;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .reality-text strong {
+            color: var(--amber-light);
+        }
+
+        .reality .btn-primary {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            padding: 18px 44px;
+        }
+
+        /* ============================================
+           HOW TO HELP
+           ============================================ */
+        .help {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .help .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .help .section-subtitle {
+            margin: 0 auto 48px;
+        }
+
+        .help-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+        }
+
+        .help-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            box-shadow: var(--shadow-md);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .help-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .help-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+        }
+
+        .help-card:nth-child(1)::before { background: var(--amber); }
+        .help-card:nth-child(2)::before { background: var(--green); }
+        .help-card:nth-child(3)::before { background: var(--amber-dark); }
+        .help-card:nth-child(4)::before { background: var(--green-dark); }
+
+        .help-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .help-title {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: var(--brown);
+            margin-bottom: 12px;
+        }
+
+        .help-desc {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .pix-display {
+            background: var(--cream);
+            border: 2px dashed var(--amber);
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .pix-label {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+
+        .pix-key {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 900;
+            font-size: 1.2rem;
+            color: var(--amber);
+            word-break: break-all;
+        }
+
+        .pix-copy {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 12px;
+            padding: 8px 18px;
+            background: var(--amber);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .pix-copy:hover {
+            background: var(--amber-dark);
+        }
+
+        .qr-area {
+            width: 140px;
+            height: 140px;
+            margin: 16px auto 0;
+            background: var(--white);
+            border: 2px solid var(--cream-dark);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            text-align: center;
+            padding: 8px;
+        }
+
+        .items-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .items-list li {
+            list-style: none;
+            padding: 8px 12px;
+            background: var(--cream);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* ============================================
+           TESTIMONIALS
+           ============================================ */
+        .testimonials {
+            padding: 100px 0;
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(232, 145, 58, 0.06) 0%, transparent 50%),
+                var(--white);
+        }
+
+        .testimonials .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .testimonials .section-subtitle {
+            margin: 0 auto 48px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .testimonial-card {
+            background: var(--cream);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-family: 'Caveat', cursive;
+            font-size: 5rem;
+            color: var(--amber);
+            opacity: 0.2;
+            position: absolute;
+            top: 8px;
+            left: 20px;
+            line-height: 1;
+        }
+
+        .testimonial-hearts {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-text {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-before-after {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 14px;
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+        }
+
+        .testimonial-before {
+            color: var(--text-light);
+            margin-bottom: 6px;
+        }
+
+        .testimonial-after {
+            color: var(--green);
+            font-weight: 600;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .testimonial-card:nth-child(1) .testimonial-avatar { background: var(--amber); }
+        .testimonial-card:nth-child(2) .testimonial-avatar { background: var(--green); }
+        .testimonial-card:nth-child(3) .testimonial-avatar { background: var(--brown-light); }
+
+        .testimonial-name {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--brown);
+        }
+
+        .testimonial-detail {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background: var(--brown);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand .logo {
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .footer-brand .logo-icon {
+            background: var(--amber);
+        }
+
+        .footer-brand p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social a {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            color: white;
+        }
+
+        .footer-social a:hover {
+            background: var(--amber);
+            transform: translateY(-3px);
+        }
+
+        .footer h4 {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: var(--amber-light); }
+
+        .footer-pix {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-pix .pix-label {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-pix .pix-key {
+            color: var(--amber-light);
+            font-size: 1rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-bottom a {
+            color: var(--amber-light);
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 1024px) {
+            .about-story { gap: 40px; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .about-story {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .dogs-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto 48px;
+            }
+
+            .help-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                max-width: 450px;
+                margin: 0 auto;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .process {
+                flex-direction: column;
+                align-items: center;
+                gap: 32px;
+            }
+
+            .process-step:not(:last-child)::after {
+                content: '↓';
+                right: auto;
+                bottom: -26px;
+                top: auto;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .hero-content {
+                padding: 100px 0 100px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .floating-donate {
+                bottom: 16px;
+                right: 16px;
+                padding: 14px 22px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+            .stat-card { padding: 24px 12px; }
+            .stat-number { font-size: 2rem; }
+            .section-title { font-size: 1.6rem; }
+        }
+
+        /* ============================================
+           ONDE ESTAMOS
+           ============================================ */
+        .location {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .location .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .location-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .location-map {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            background: #e8e0d8;
+            aspect-ratio: 4/3;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .location-map-pin {
+            font-size: 3.5rem;
+            animation: bounce-pin 1.8s ease-in-out infinite;
+        }
+
+        @keyframes bounce-pin {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .location-map-label {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--brown);
+        }
+
+        .location-map-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--amber);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            padding: 12px 24px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.2s;
+            margin-top: 8px;
+        }
+
+        .location-map-btn:hover {
+            background: var(--amber-dark);
+            transform: translateY(-2px);
+            color: var(--white);
+        }
+
+        .location-info {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .location-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .location-item-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+
+        .location-item-body h4 {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-size: 1rem;
+            color: var(--brown);
+            margin-bottom: 4px;
+        }
+
+        .location-item-body p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .location-layout {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+
+        /* ============================================
+           LOJA SOLIDÁRIA
+           ============================================ */
+        .loja {
+            padding: 100px 0;
+            background: var(--cream);
+            position: relative;
+        }
+
+        .loja .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .loja-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 32px 24px 24px;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+        }
+
+        .product-card:nth-child(1)::before { background: var(--amber); }
+        .product-card:nth-child(2)::before { background: var(--green); }
+        .product-card:nth-child(3)::before { background: var(--amber-dark); }
+        .product-card:nth-child(4)::before { background: var(--green-dark); }
+        .product-card:nth-child(5)::before { background: var(--amber); }
+
+        .product-badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: var(--amber);
+            color: var(--white);
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .product-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: var(--cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .product-name {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--brown);
+            margin-bottom: 8px;
+        }
+
+        .product-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 16px;
+            flex: 1;
+        }
+
+        .product-price {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: var(--amber-dark);
+            margin-bottom: 16px;
+        }
+
+        .product-price span {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+        .loja-note {
+            text-align: center;
+            margin-top: 48px;
+            padding: 24px 32px;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .loja-note p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 900px) {
+            .loja-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        }
+
+        @media (max-width: 480px) {
+            .loja-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <span class="logo-icon">🐾</span>
+                Dr. Cão Abrigo Pet
+            </a>
+            <nav class="nav">
+                <a href="#sobre">Sobre</a>
+                <a href="#resgatados">Resgatados</a>
+                <a href="#realidade">A Realidade</a>
+                <a href="#ajudar">Como Ajudar</a>
+                <a href="#loja">Loja 🛍️</a>
+                <a href="#localizacao">Onde Estamos</a>
+                <a href="#ajudar" class="nav-cta">Doe Agora 💛</a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#sobre" onclick="closeMobile()">Sobre</a>
+        <a href="#fazemos" onclick="closeMobile()">O Que Fazemos</a>
+        <a href="#resgatados" onclick="closeMobile()">Resgatados</a>
+        <a href="#realidade" onclick="closeMobile()">A Realidade</a>
+        <a href="#ajudar" onclick="closeMobile()">Como Ajudar</a>
+        <a href="#loja" onclick="closeMobile()">Loja 🛍️</a>
+        <a href="#localizacao" onclick="closeMobile()">Onde Estamos</a>
+        <a href="#depoimentos" onclick="closeMobile()">Depoimentos</a>
+        <a href="#ajudar" class="btn btn-primary" onclick="closeMobile()">Doe Agora 💛</a>
+    </div>
+
+    <!-- Floating Donate Button -->
+    <button class="floating-donate" id="floatingDonate" onclick="document.getElementById('ajudar').scrollIntoView({behavior:'smooth'})">
+        <span class="pulse-ring"></span>
+        💛 Doe Agora
+    </button>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge reveal">
+                    🐾 Abrigo 100% voluntário — sem ajuda governamental
+                </div>
+                <h1 class="reveal reveal-delay-1">
+                    Todo cão merece<br>um <em>lar</em>.
+                </h1>
+                <p class="hero-subtitle reveal reveal-delay-2">
+                    Enquanto isso, merece amor. 💛
+                </p>
+                <p class="hero-text reveal reveal-delay-3">
+                    O Dr. Cão resgata cães abandonados e em situação de vulnerabilidade.
+                    Aqui eles são castrados, vacinados e cuidados com todo amor — até encontrarem
+                    uma família que mereçam.
+                </p>
+                <div class="hero-buttons reveal reveal-delay-4">
+                    <a href="#ajudar" class="btn btn-primary">Doe Agora 💛</a>
+                    <a href="#sobre" class="btn btn-secondary">Conheça Nossa História</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-paws" aria-hidden="true">
+            <span style="--r: -20deg">🐾</span>
+            <span style="--r: 10deg">🐾</span>
+            <span style="--r: -5deg">🐾</span>
+            <span style="--r: 25deg">🐾</span>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <div class="about-story">
+                <div class="about-image reveal">
+                    <div class="about-image-inner">
+                        <span class="emoji-large">🐕</span>
+                        <p>Onde todo cão encontra amor</p>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <span class="section-label reveal">Nossa História</span>
+                    <h2 class="section-title reveal reveal-delay-1">De um olhar que acolhe<br>a um abrigo que transforma</h2>
+                    <p class="reveal reveal-delay-2">
+                        Em 2021 iniciamos um projeto de serviços assistidos por animais (SAA), levando nossos
+                        animais a asilos, escolas e eventos. Ali vimos de perto o poder de um olhar, um toque e
+                        uma conexão verdadeira. Entendemos que um animal não oferece apenas companhia — ele leva
+                        conforto, alegria e transforma vidas.
+                    </p>
+                    <p class="reveal reveal-delay-2">
+                        Enquanto isso, nas ruas, a realidade era outra. Paralelamente, realizávamos castrações
+                        independentes, alimentávamos cães comunitários e tentávamos, dentro do possível, amenizar
+                        o sofrimento que víamos todos os dias. Mas o número de abandonos e casos de maus-tratos só
+                        aumentava. Chegou um momento em que não dava mais para seguir da mesma forma.
+                    </p>
+                    <div class="highlight-quote reveal reveal-delay-3">
+                        "Tivemos que nos reinventar. Em 2024, criamos nosso abrigo."
+                    </div>
+                    <p class="reveal reveal-delay-3">
+                        Hoje, nossa missão é ainda mais intensa. Nos dedicamos à castração, ao resgate, à recuperação
+                        e ao tratamento de cães em estado de vulnerabilidade. Já salvamos, tratamos e ajudamos dezenas
+                        de animais a recomeçarem suas histórias, além de mantermos ações contínuas de adoção responsável.
+                    </p>
+                    <p class="reveal reveal-delay-4">
+                        Seguimos firmes, acreditando que todo animal merece ser amparado, cuidado com amor, respeito
+                        e bem-estar — sem fome e sem abandono. E que uma sociedade mais consciente é aquela que protege,
+                        cuida e espalha boas práticas de convivência com os animais.
+                    </p>
+                    <div class="team reveal reveal-delay-4">
+                        <div class="team-member">
+                            <div class="team-avatar">C</div>
+                            <div>
+                                <div class="team-name">Cleiton</div>
+                                <div class="team-role">Fundador</div>
+                            </div>
+                        </div>
+                        <div class="team-member">
+                            <div class="team-avatar">A</div>
+                            <div>
+                                <div class="team-name">Andréia</div>
+                                <div class="team-role">Co-fundadora</div>
+                            </div>
+                        </div>
+                        <div class="team-member">
+                            <div class="team-avatar">L</div>
+                            <div>
+                                <div class="team-name">Lucas</div>
+                                <div class="team-role">Voluntário</div>
+                            </div>
+                        </div>
+                        <div class="team-member">
+                            <div class="team-avatar">P</div>
+                            <div>
+                                <div class="team-name">Priscila</div>
+                                <div class="team-role">Voluntária</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats">
+                <div class="stat-card reveal">
+                    <span class="stat-icon">🐕</span>
+                    <span class="stat-number" data-target="200">0</span>
+                    <span class="stat-label">Cães resgatados</span>
+                </div>
+                <div class="stat-card reveal reveal-delay-1">
+                    <span class="stat-icon">🩺</span>
+                    <span class="stat-number" data-target="150">0</span>
+                    <span class="stat-label">Castrações realizadas</span>
+                </div>
+                <div class="stat-card reveal reveal-delay-2">
+                    <span class="stat-icon">🏠</span>
+                    <span class="stat-number" data-target="80">0</span>
+                    <span class="stat-label">Adoções bem-sucedidas</span>
+                </div>
+                <div class="stat-card reveal reveal-delay-3">
+                    <span class="stat-icon">💛</span>
+                    <span class="stat-number" data-target="5">0</span>
+                    <span class="stat-label">Anos de existência</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WHAT WE DO ========== -->
+    <section class="what-we-do" id="fazemos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal">Nosso Trabalho</span>
+                <h2 class="section-title reveal reveal-delay-1">O caminho de volta à vida</h2>
+                <p class="section-subtitle reveal reveal-delay-2">
+                    Cada cão que chega ao Dr. Cão passa por um processo completo de recuperação
+                    e cuidado, até estar pronto para encontrar uma família.
+                </p>
+            </div>
+
+            <div class="process">
+                <div class="process-step reveal">
+                    <div class="process-icon">🚨</div>
+                    <h3 class="process-title">Resgate</h3>
+                    <p class="process-desc">Vamos até o local, resgatamos o cão em situação de rua ou vulnerabilidade</p>
+                </div>
+                <div class="process-step reveal reveal-delay-1">
+                    <div class="process-icon">✂️</div>
+                    <h3 class="process-title">Castração</h3>
+                    <p class="process-desc">Procedimento para controle populacional e saúde do animal</p>
+                </div>
+                <div class="process-step reveal reveal-delay-2">
+                    <div class="process-icon">💉</div>
+                    <h3 class="process-title">Vacinação</h3>
+                    <p class="process-desc">Protocolo completo de vacinas para proteção contra doenças</p>
+                </div>
+                <div class="process-step reveal reveal-delay-3">
+                    <div class="process-icon">❤️</div>
+                    <h3 class="process-title">Cuidados</h3>
+                    <p class="process-desc">Alimentação, banho, carinho e acompanhamento veterinário contínuo</p>
+                </div>
+                <div class="process-step reveal reveal-delay-4">
+                    <div class="process-icon">🏠</div>
+                    <h3 class="process-title">Adoção</h3>
+                    <p class="process-desc">Encontramos uma família responsável que dê amor para sempre</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== RESCUED DOGS ========== -->
+    <section class="rescued" id="resgatados">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal">Nossos Resgatados</span>
+                <h2 class="section-title reveal reveal-delay-1">Eles estão esperando por você</h2>
+                <p class="section-subtitle reveal reveal-delay-2">
+                    Cada um tem uma história. Cada um merece um final feliz.
+                    Será que o seu novo melhor amigo está aqui?
+                </p>
+            </div>
+
+            <div class="dogs-grid">
+                <div class="dog-card reveal">
+                    <div class="dog-photo">
+                        <img src="flor%201.jpeg" alt="Flor, cadelinha resgatada do Dr. Cão" style="width:100%;height:100%;object-fit:cover;display:block">
+                        <span class="dog-badge badge-available">Disponível</span>
+                    </div>
+                    <div class="dog-info">
+                        <h3 class="dog-name">Flor</h3>
+                        <p class="dog-details">Fêmea · ~8 anos · Dócil e carinhosa · Castrada e vacinada</p>
+                        <p class="dog-story">Fui abandonada com meus dois filhotinhos, cheia de carrapatos, doente e com o útero inflamado. Fui resgatada e passei por uma cirurgia às pressas — e consegui. Meus filhotes já encontraram um lar… e eu fiquei. Agora é a minha vez: sou uma senhorinha dócil, totalmente saudável, só me falta uma família pra chamar de minha.</p>
+                        <div class="dog-gallery" style="display:flex;gap:6px;margin-top:12px">
+                            <img src="flor%201.jpeg" alt="Flor" style="width:33.33%;aspect-ratio:1/1;object-fit:cover;border-radius:8px">
+                            <img src="flor%202.jpeg" alt="Flor" style="width:33.33%;aspect-ratio:1/1;object-fit:cover;border-radius:8px">
+                            <img src="flor%203.jpeg" alt="Flor" style="width:33.33%;aspect-ratio:1/1;object-fit:cover;border-radius:8px">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dog-card reveal reveal-delay-1">
+                    <div class="dog-photo">
+                        <img src="mel1.jpeg" alt="Mel, cadelinha resgatada do Dr. Cão" style="width:100%;height:100%;object-fit:cover;display:block">
+                        <span class="dog-badge badge-available">Disponível</span>
+                    </div>
+                    <div class="dog-info">
+                        <h3 class="dog-name">Mel</h3>
+                        <p class="dog-details">Fêmea · Deficiência na patinha traseira · Castrada e vacinada</p>
+                        <p class="dog-story">A Mel enfrentava sozinha uma avenida movimentada, correndo risco todos os dias. A gente chegou a tempo. Hoje está segura no abrigo — mas ainda falta o que ela mais merece: um lar, uma família, amor de verdade. A Mel não precisa de pena, ela precisa de uma chance.</p>
+                        <div class="dog-gallery" style="display:flex;gap:8px;margin-top:12px">
+                            <img src="mel1.jpeg" alt="Mel" style="width:50%;aspect-ratio:1/1;object-fit:cover;border-radius:8px">
+                            <img src="mel%202.jpeg" alt="Mel" style="width:50%;aspect-ratio:1/1;object-fit:cover;border-radius:8px">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dog-card reveal reveal-delay-2">
+                    <div class="dog-photo">
+                        <img src="juan1.jpeg" alt="Juan, filhote resgatado do Dr. Cão" style="width:100%;height:100%;object-fit:cover;display:block">
+                        <span class="dog-badge badge-available">Disponível</span>
+                    </div>
+                    <div class="dog-info">
+                        <h3 class="dog-name">Juan</h3>
+                        <p class="dog-details">Macho · Filhote ~6 meses · Porte médio · Carinhoso e brincalhão</p>
+                        <p class="dog-story">Vivia nas ruas, revirando lixos para conseguir sobreviver. É muito carinhoso e brincalhão, daqueles que só querem atenção e um pouco de amor. Ainda é um pouco medrosinho — reflexo de tudo que já passou. Com paciência e carinho, ele vai mostrar o quanto pode ser um companheiro fiel.</p>
+                        <div class="dog-gallery" style="display:flex;gap:6px;margin-top:12px">
+                            <img src="juan1.jpeg" alt="Juan" style="width:33.33%;aspect-ratio:1/1;object-fit:cover;border-radius:8px">
+                            <img src="juan2.jpeg" alt="Juan" style="width:33.33%;aspect-ratio:1/1;object-fit:cover;border-radius:8px">
+                            <img src="juan3.jpeg" alt="Juan" style="width:33.33%;aspect-ratio:1/1;object-fit:cover;border-radius:8px">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dog-card reveal reveal-delay-1">
+                    <div class="dog-photo">
+                        <img src="branquinha1.jpeg" alt="Branquinha, cadelinha resgatada do Dr. Cão" style="width:100%;height:100%;object-fit:cover;display:block">
+                        <span class="dog-badge badge-available">Disponível</span>
+                    </div>
+                    <div class="dog-info">
+                        <h3 class="dog-name">Branquinha</h3>
+                        <p class="dog-details">Fêmea · Super sociável · Castrada e vacinada · Totalmente saudável</p>
+                        <p class="dog-story">A Branquinha já conheceu o lado mais difícil da vida. Vivia nas ruas, foi resgatada debilitada, com doença do carrapato e bem anêmica. Mas ela venceu. Hoje está totalmente saudável, cheia de vida e amor para dar. É super sociável com outros cachorros e com seres humanos, e adora um carinho. Agora só falta uma coisa: um lar cheio de amor.</p>
+                        <div class="dog-gallery" style="display:flex;gap:8px;margin-top:12px">
+                            <img src="branquinha1.jpeg" alt="Branquinha" style="width:50%;aspect-ratio:1/1;object-fit:cover;border-radius:8px">
+                            <img src="branquinha2.jpeg" alt="Branquinha" style="width:50%;aspect-ratio:1/1;object-fit:cover;border-radius:8px">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dog-card reveal reveal-delay-2">
+                    <div class="dog-photo">
+                        <img src="bob1.jpeg" alt="Bob, cachorro resgatado do Dr. Cão" style="width:100%;height:100%;object-fit:cover;display:block">
+                        <span class="dog-badge badge-available">Disponível</span>
+                    </div>
+                    <div class="dog-info">
+                        <h3 class="dog-name">Bob</h3>
+                        <p class="dog-details">Macho · ~2 anos · Grandão cheio de energia · Brincalhão e sociável</p>
+                        <p class="dog-story">Bob é um grandão cheio de energia, sempre pronto para uma boa corrida e momentos de diversão. Brincalhão e super amigo, tem aquele jeito alegre que contagia o ambiente. Se dá bem com pessoas e só precisa de uma chance para mostrar o companheiro incrível que pode ser.</p>
+                        <div class="dog-gallery" style="display:flex;gap:6px;margin-top:12px">
+                            <img src="bob1.jpeg" alt="Bob" style="width:33.33%;aspect-ratio:1/1;object-fit:cover;border-radius:8px">
+                            <img src="bob2.jpeg" alt="Bob" style="width:33.33%;aspect-ratio:1/1;object-fit:cover;border-radius:8px">
+                            <img src="bob3.jpeg" alt="Bob" style="width:33.33%;aspect-ratio:1/1;object-fit:cover;border-radius:8px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dogs-cta reveal">
+                <a href="https://instagram.com/drcaoabrigopet" target="_blank" rel="noopener" class="instagram-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" style="vertical-align:middle;flex-shrink:0;margin-right:6px"><defs><radialGradient id="ig-grad-a" cx="30%" cy="107%" r="150%"><stop offset="0%" stop-color="#fdf497"/><stop offset="5%" stop-color="#fdf497"/><stop offset="45%" stop-color="#fd5949"/><stop offset="60%" stop-color="#d6249f"/><stop offset="90%" stop-color="#285AEB"/></radialGradient></defs><path fill="url(#ig-grad-a)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Ver todos no Instagram — @drcaoabrigopet
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== THE REALITY ========== -->
+    <section class="reality" id="realidade">
+        <div class="container">
+            <div class="reality-content">
+                <span class="reality-icon reveal">💔</span>
+                <span class="section-label reveal reveal-delay-1">A Realidade</span>
+                <h2 class="section-title reveal reveal-delay-2">
+                    Nem todos conseguem ficar
+                </h2>
+                <p class="reality-text reveal reveal-delay-3">
+                    O Dr. Cão não recebe nenhum centavo do governo. Não tem patrocínio de empresa.
+                    Tudo — absolutamente tudo — vem do bolso do Cleiton e da generosidade
+                    de pessoas como você.
+                </p>
+                <p class="reality-text reveal reveal-delay-3">
+                    A ração, os medicamentos, as castrações, as vacinas, o veterinário...
+                    tudo custa. E quando o dinheiro acaba, a realidade é dura:
+                </p>
+                <p class="reality-highlight reveal reveal-delay-4">
+                    "Alguns dos nossos resgatados, por falta de recursos,<br>
+                    precisam voltar para as ruas."
+                </p>
+                <p class="reality-text reveal reveal-delay-4">
+                    Cada cão que volta para a rua é uma derrota que dói na alma de todos nós.
+                    Mas não precisa ser assim. <strong>Com a sua ajuda, mais cães podem ficar.
+                    Mais cães podem ser tratados. Mais cães podem encontrar um lar.</strong>
+                </p>
+                <a href="#ajudar" class="btn btn-primary reveal reveal-delay-5">
+                    Você pode mudar essa história 💛
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== HOW TO HELP ========== -->
+    <section class="help" id="ajudar">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal">Como Ajudar</span>
+                <h2 class="section-title reveal reveal-delay-1">Toda ajuda transforma vidas</h2>
+                <p class="section-subtitle reveal reveal-delay-2">
+                    Não importa como — qualquer gesto faz diferença.
+                    Escolha a forma que cabe no seu coração e no seu bolso.
+                </p>
+            </div>
+
+            <div class="help-grid">
+                <!-- Pix -->
+                <div class="help-card reveal">
+                    <span class="help-icon">💰</span>
+                    <h3 class="help-title">Doe via Pix</h3>
+                    <p class="help-desc">
+                        Qualquer valor ajuda. R$10 alimenta um cão por 2 dias.
+                        R$50 paga uma vacina. R$200 cobre uma castração.
+                    </p>
+                    <div class="pix-display">
+                        <div class="pix-label">Pague para</div>
+                        <div class="pix-key" id="pixKey">Instituto Juntos pelo Futuro</div>
+                        <img src="pix-qrcode.jpeg" alt="QR Code Pix — Instituto Juntos pelo Futuro" style="width:100%;max-width:260px;margin:16px auto 0;display:block;border-radius:12px;background:#fff;padding:8px">
+                        <p style="font-size:0.85rem;color:rgba(74,55,40,0.7);margin-top:10px;text-align:center">Abra o app do seu banco e escaneie o QR Code</p>
+                        <div style="margin-top:18px;padding-top:16px;border-top:1px dashed rgba(74,55,40,0.2)">
+                            <div class="pix-label">Ou use a chave Pix (telefone)</div>
+                            <div class="pix-key" id="pixKeyPhone">17 98185-4759</div>
+                            <button type="button" class="pix-copy" onclick="copyPixPhone(this)">Copiar chave</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products -->
+                <div class="help-card reveal reveal-delay-1">
+                    <span class="help-icon">📦</span>
+                    <h3 class="help-title">Doe Produtos</h3>
+                    <p class="help-desc">
+                        Produtos essenciais para o dia a dia do abrigo.
+                        Aceitamos itens novos ou usados em bom estado.
+                    </p>
+                    <ul class="items-list">
+                        <li>🍖 Ração (qualquer marca e tamanho)</li>
+                        <li>💊 Medicamentos e vermífugos</li>
+                        <li>🧣 Cobertores e panos limpos</li>
+                        <li>🧴 Produtos de limpeza</li>
+                        <li>🦴 Brinquedos e coleiras</li>
+                    </ul>
+                </div>
+
+                <!-- Volunteer -->
+                <div class="help-card reveal reveal-delay-2">
+                    <span class="help-icon">🤝</span>
+                    <h3 class="help-title">Seja Voluntário</h3>
+                    <p class="help-desc">
+                        Temos muito trabalho e poucas mãos.
+                        Banhos, alimentação, passeios, transporte para o vet...
+                        Se você tem algumas horas por semana, venha fazer parte!
+                    </p>
+                    <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20ser%20volunt%C3%A1rio%20no%20Dr.%20C%C3%A3o!" target="_blank" rel="noopener" class="btn btn-secondary" style="width:100%; justify-content: center; margin-top: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" style="vertical-align:middle;flex-shrink:0;margin-right:6px"><path fill="#25D366" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Fale conosco no WhatsApp
+                    </a>
+                </div>
+
+                <!-- Adoption -->
+                <div class="help-card reveal reveal-delay-3">
+                    <span class="help-icon">🏠</span>
+                    <h3 class="help-title">Adote com Responsabilidade</h3>
+                    <p class="help-desc">
+                        A melhor forma de ajudar é dar um lar.
+                        Todos os nossos cães são entregues castrados, vacinados e
+                        com acompanhamento pós-adoção.
+                    </p>
+                    <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Tenho%20interesse%20em%20adotar%20um%20c%C3%A3o%20do%20Dr.%20C%C3%A3o!" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%; justify-content: center; margin-top: 8px;">
+                        🐾 Quero Adotar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LOJA SOLIDÁRIA ========== -->
+    <section class="loja" id="loja">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal">Loja Solidária</span>
+                <h2 class="section-title reveal reveal-delay-1">Compre e ajude quem mais precisa</h2>
+                <p class="section-subtitle reveal reveal-delay-2">
+                    Cada produto comprado gera renda para o abrigo.
+                    Leve um pedacinho do Dr. Cão para casa e ajude a transformar vidas.
+                </p>
+            </div>
+
+            <div class="loja-grid">
+                <!-- Caneca -->
+                <div class="product-card reveal">
+                    <span class="product-badge">Mais Vendido</span>
+                    <div class="product-img">☕</div>
+                    <h3 class="product-name">Caneca Dr. Cão</h3>
+                    <p class="product-desc">Caneca de porcelana 325ml com estampa exclusiva do Dr. Cão. Resistente a micro-ondas e lava-louças.</p>
+                    <div class="product-price">R$ 39,90 <span>+ frete</span></div>
+                    <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20comprar%20a%20Caneca%20Dr.%20C%C3%A3o!" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;justify-content:center">
+                        🛍️ Comprar agora
+                    </a>
+                </div>
+
+                <!-- Caneta -->
+                <div class="product-card reveal reveal-delay-1">
+                    <div class="product-img">✏️</div>
+                    <h3 class="product-name">Caneta Dr. Cão</h3>
+                    <p class="product-desc">Caneta esferográfica com grip anatômico e estampa da patinha. Escrita suave, tinta azul ou preta.</p>
+                    <div class="product-price">R$ 12,90 <span>+ frete</span></div>
+                    <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20comprar%20a%20Caneta%20Dr.%20C%C3%A3o!" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;justify-content:center">
+                        🛍️ Comprar agora
+                    </a>
+                </div>
+
+                <!-- Camiseta -->
+                <div class="product-card reveal reveal-delay-2">
+                    <span class="product-badge">Novidade</span>
+                    <div class="product-img">👕</div>
+                    <h3 class="product-name">Camiseta Dr. Cão</h3>
+                    <p class="product-desc">Camiseta 100% algodão com estampa "Adote, não compre". Tamanhos P ao GG. Use com orgulho!</p>
+                    <div class="product-price">R$ 59,90 <span>+ frete</span></div>
+                    <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20comprar%20a%20Camiseta%20Dr.%20C%C3%A3o!" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;justify-content:center">
+                        🛍️ Comprar agora
+                    </a>
+                </div>
+
+                <!-- Ecobag -->
+                <div class="product-card reveal">
+                    <div class="product-img">🛍️</div>
+                    <h3 class="product-name">Ecobag Dr. Cão</h3>
+                    <p class="product-desc">Sacola ecológica de algodão cru com alça longa. Prática, resistente e com estampa fofa do abrigo.</p>
+                    <div class="product-price">R$ 29,90 <span>+ frete</span></div>
+                    <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20comprar%20a%20Ecobag%20Dr.%20C%C3%A3o!" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;justify-content:center">
+                        🛍️ Comprar agora
+                    </a>
+                </div>
+
+                <!-- Adesivos -->
+                <div class="product-card reveal reveal-delay-1">
+                    <div class="product-img">🏷️</div>
+                    <h3 class="product-name">Pack de Adesivos</h3>
+                    <p class="product-desc">Pack com 10 adesivos vinil resistentes à água. Patinhas, frases motivacionais e os cãezinhos do abrigo.</p>
+                    <div class="product-price">R$ 19,90 <span>+ frete</span></div>
+                    <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20comprar%20o%20Pack%20de%20Adesivos%20Dr.%20C%C3%A3o!" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;justify-content:center">
+                        🛍️ Comprar agora
+                    </a>
+                </div>
+            </div>
+
+            <div class="loja-note reveal">
+                <p>💛 <strong>100% do lucro</strong> vai direto para o abrigo — alimentação, vacinas, castrações e cuidados dos cãezinhos. Ao comprar, você vira parte da nossa família!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ONDE ESTAMOS ========== -->
+    <section class="location" id="localizacao">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal">Onde Estamos</span>
+                <h2 class="section-title reveal reveal-delay-1">Venha nos visitar</h2>
+                <p class="section-subtitle reveal reveal-delay-2">
+                    Nosso abrigo está sempre de portas abertas para voluntários,
+                    visitantes e futuros pais adotivos.
+                </p>
+            </div>
+
+            <div class="location-layout">
+                <div class="location-map reveal">
+                    <div class="location-map-pin">📍</div>
+                    <div class="location-map-label">Dr. Cão — Abrigo Pet</div>
+                    <a href="https://maps.app.goo.gl/CBjqKb12hL6DTeby9" target="_blank" rel="noopener" class="location-map-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        Ver no Google Maps
+                    </a>
+                </div>
+
+                <div class="location-info reveal reveal-delay-1">
+                    <div class="location-item">
+                        <div class="location-item-icon">🏠</div>
+                        <div class="location-item-body">
+                            <h4>Endereço</h4>
+                            <p>Confira o endereço completo no Google Maps clicando no botão ao lado.</p>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <div class="location-item-icon">🕐</div>
+                        <div class="location-item-body">
+                            <h4>Horário de Visitas</h4>
+                            <p>Segunda a sexta: 9h às 17h<br>Sábados: 9h às 13h<br>Domingos e feriados: fechado</p>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <div class="location-item-icon">📞</div>
+                        <div class="location-item-body">
+                            <h4>Contato</h4>
+                            <p>Fale conosco pelo WhatsApp antes de visitar para confirmar disponibilidade.</p>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <div class="location-item-icon">🐾</div>
+                        <div class="location-item-body">
+                            <h4>Visitas para Adoção</h4>
+                            <p>Agende sua visita e venha conhecer os cãezinhos pessoalmente. Trazemos alegria garantida!</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20abrigo%20Dr.%20C%C3%A3o!" target="_blank" rel="noopener" class="btn btn-primary" style="align-self:flex-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" style="vertical-align:middle;margin-right:6px"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        Agendar Visita
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="testimonials" id="depoimentos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label reveal">Depoimentos</span>
+                <h2 class="section-title reveal reveal-delay-1">Histórias que aquecem o coração</h2>
+                <p class="section-subtitle reveal reveal-delay-2">
+                    Cada adoção é um final feliz. Veja o que dizem as famílias
+                    que encontraram seu melhor amigo no Dr. Cão.
+                </p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-hearts">❤️❤️❤️❤️❤️</div>
+                    <p class="testimonial-text">
+                        "Adotamos o Rex achando que íamos salvar ele.
+                        Na verdade, ele que salvou a gente. A casa ganhou vida,
+                        as crianças ganharam responsabilidade, e todos ganhamos
+                        um amor incondicional."
+                    </p>
+                    <div class="testimonial-before-after">
+                        <p class="testimonial-before">🔹 <strong>Antes:</strong> Encontrado desnutrido e com sarna em um terreno baldio</p>
+                        <p class="testimonial-after">🔸 <strong>Depois:</strong> 8 meses depois, peludo, saudável e dono do sofá da sala</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">F</div>
+                        <div>
+                            <div class="testimonial-name">Família Rodrigues</div>
+                            <div class="testimonial-detail">Adotaram o Rex em 2024</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal reveal-delay-1">
+                    <div class="testimonial-hearts">❤️❤️❤️❤️❤️</div>
+                    <p class="testimonial-text">
+                        "A Pretinha chegou tão assustada que não deixava ninguém
+                        encostar. Hoje ela dorme na minha cama, me espera na porta
+                        e é a dona da casa. Melhor decisão da minha vida."
+                    </p>
+                    <div class="testimonial-before-after">
+                        <p class="testimonial-before">🔹 <strong>Antes:</strong> Resgatada após ser abandonada em uma mudança</p>
+                        <p class="testimonial-after">🔸 <strong>Depois:</strong> Rainha do lar, companheira inseparável</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">C</div>
+                        <div>
+                            <div class="testimonial-name">Camila Souza</div>
+                            <div class="testimonial-detail">Adotou a Pretinha em 2025</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal reveal-delay-2">
+                    <div class="testimonial-hearts">❤️❤️❤️❤️❤️</div>
+                    <p class="testimonial-text">
+                        "Moro sozinho e o Caramelo mudou tudo. Ele me faz
+                        levantar cedo, sair pra caminhar, sorrir sem motivo.
+                        Obrigado, Dr. Cão, por cuidar dele até eu chegar."
+                    </p>
+                    <div class="testimonial-before-after">
+                        <p class="testimonial-before">🔹 <strong>Antes:</strong> Vivia há 3 anos nas ruas do centro da cidade</p>
+                        <p class="testimonial-after">🔸 <strong>Depois:</strong> Companheiro fiel de caminhadas matinais</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">R</div>
+                        <div>
+                            <div class="testimonial-name">Roberto Almeida</div>
+                            <div class="testimonial-detail">Adotou o Caramelo em 2025</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer" id="contato">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">🐾</span>
+                        Dr. Cão
+                    </div>
+                    <p>
+                        Resgatamos, cuidamos e encontramos lares para cães
+                        abandonados. Somos movidos por amor e sustentados
+                        pela generosidade de pessoas como você.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/drcaoabrigopet" target="_blank" rel="noopener" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"><defs><radialGradient id="ig-grad-b" cx="30%" cy="107%" r="150%"><stop offset="0%" stop-color="#fdf497"/><stop offset="5%" stop-color="#fdf497"/><stop offset="45%" stop-color="#fd5949"/><stop offset="60%" stop-color="#d6249f"/><stop offset="90%" stop-color="#285AEB"/></radialGradient></defs><path fill="url(#ig-grad-b)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                        <a href="https://wa.me/5500000000000" target="_blank" rel="noopener" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"><path fill="#25D366" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Navegação</h4>
+                    <div class="footer-links">
+                        <a href="#sobre">Sobre o Abrigo</a>
+                        <a href="#fazemos">O Que Fazemos</a>
+                        <a href="#resgatados">Nossos Resgatados</a>
+                        <a href="#realidade">A Realidade</a>
+                        <a href="#ajudar">Como Ajudar</a>
+                        <a href="#loja">Loja 🛍️</a>
+                        <a href="#localizacao">Onde Estamos</a>
+                        <a href="#depoimentos">Depoimentos</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Doe Agora 💛</h4>
+                    <div class="footer-pix">
+                        <div class="pix-label">Pix — Pague para</div>
+                        <div class="pix-key">Instituto Juntos pelo Futuro</div>
+                        <div class="pix-label" style="margin-top:10px">Chave Pix (telefone)</div>
+                        <div class="pix-key">17 98185-4759</div>
+                    </div>
+                    <div class="footer-links" style="margin-top: 20px;">
+                        <a href="https://wa.me/5500000000000" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="vertical-align:middle;margin-right:4px"><path fill="#25D366" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> WhatsApp</a>
+                        <a href="https://instagram.com/drcaoabrigopet" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="vertical-align:middle;margin-right:4px"><defs><radialGradient id="ig-grad-c" cx="30%" cy="107%" r="150%"><stop offset="0%" stop-color="#fdf497"/><stop offset="5%" stop-color="#fdf497"/><stop offset="45%" stop-color="#fd5949"/><stop offset="60%" stop-color="#d6249f"/><stop offset="90%" stop-color="#285AEB"/></radialGradient></defs><path fill="url(#ig-grad-c)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> @drcaoabrigopet</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Feito com ❤️ para o Dr. Cão — Porque todo cão merece amor</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+        // ===== MOBILE MENU =====
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        function closeMobile() {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // ===== HEADER SCROLL =====
+        const header = document.getElementById('header');
+        const floatingDonate = document.getElementById('floatingDonate');
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+
+            // Header solid background
+            if (scrollY > 80) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            // Floating donate button
+            if (scrollY > 600) {
+                floatingDonate.classList.add('visible');
+            } else {
+                floatingDonate.classList.remove('visible');
+            }
+        });
+
+        // ===== INTERSECTION OBSERVER — REVEAL ANIMATIONS =====
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // ===== STAT COUNTER ANIMATION =====
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.dataset.target);
+                    const duration = 2000;
+                    const startTime = performance.now();
+
+                    function easeOutCubic(t) {
+                        return 1 - Math.pow(1 - t, 3);
+                    }
+
+                    function updateCounter(currentTime) {
+                        const elapsed = currentTime - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const easedProgress = easeOutCubic(progress);
+                        const current = Math.round(easedProgress * target);
+
+                        el.textContent = current + '+';
+
+                        if (progress < 1) {
+                            requestAnimationFrame(updateCounter);
+                        }
+                    }
+
+                    requestAnimationFrame(updateCounter);
+                    counterObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-number').forEach(el => {
+            counterObserver.observe(el);
+        });
+
+        // ===== COPY PIX =====
+        function flashCopied(btn) {
+            if (!btn) return;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '✅ Copiado!';
+            btn.style.background = 'var(--green)';
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '';
+            }, 2000);
+        }
+        function copyPixValue(value, btn) {
+            navigator.clipboard.writeText(value).then(() => flashCopied(btn)).catch(() => {
+                const textarea = document.createElement('textarea');
+                textarea.value = value;
+                textarea.style.position = 'fixed';
+                textarea.style.left = '-9999px';
+                document.body.appendChild(textarea);
+                textarea.select();
+                try { document.execCommand('copy'); flashCopied(btn); } catch(e) {}
+                document.body.removeChild(textarea);
+            });
+        }
+        function copyPix(btn) {
+            copyPixValue(document.getElementById('pixKey').textContent, btn || document.querySelector('.pix-copy'));
+        }
+        function copyPixPhone(btn) {
+            copyPixValue('17981854759', btn);
+        }
+
+        // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = header.offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight - 20;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
