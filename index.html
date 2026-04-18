@@ -2585,5 +2585,26 @@
             });
         });
     </script>
+
+<div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out">
+    <img id="lightbox-img" src="" style="max-width:90vw;max-height:90vh;border-radius:12px;box-shadow:0 8px 40px rgba(0,0,0,0.5)">
+</div>
+<script>
+    (function(){
+        const lb = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lightbox-img');
+        document.querySelectorAll('.dog-gallery img').forEach(function(img){
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', function(){
+                lbImg.src = this.src;
+                lb.style.display = 'flex';
+            });
+        });
+        lb.addEventListener('click', function(){
+            lb.style.display = 'none';
+            lbImg.src = '';
+        });
+    })();
+</script>
 </body>
 </html>
